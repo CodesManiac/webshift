@@ -41,7 +41,7 @@
       padding: 0.5rem 1rem;
       cursor: pointer;
       &:hover {
-        background-color: colors.$yellow;
+        border-color: colors.$yellow;
         color: colors.$white;
       }
     }
