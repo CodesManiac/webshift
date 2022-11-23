@@ -1,0 +1,86 @@
+@use '../base/typography';
+@use '../base/colors';
+@use '../base/mediaQueries';
+%form-fields {
+  border: 1px solid colors.$white;
+  border-radius: 3rem;
+  color: colors.$white;
+  background-color: transparent;
+}
+.footer-container {
+  background-color: colors.$black;
+  color: colors.$white;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+  padding: 3rem 0 1rem 0;
+  .form-container {
+    display: grid;
+    gap: 1rem;
+
+    & > input {
+      @include typography.fontTheme(
+        $fontSize: 16px,
+        $fontWeight: 500,
+        $lineHeight: 19px
+      );
+      @extend %form-fields;
+      padding: 1.5rem 2rem;
+      outline: none;
+    }
+    & > button {
+      @include typography.fontTheme(
+        $fontSize: 18px,
+        $fontWeight: 400,
+        $lineHeight: 21px
+      );
+      @extend %form-fields;
+      width: 50%;
+      place-self: center;
+      padding: 0.5rem 1rem;
+    }
+  }
+  .copyright {
+    @include typography.fontTheme(
+      $fontFamily: 'Aeonik Regular',
+      $fontSize: 12px,
+      $fontWeight: 400,
+      //   $lineHeight: 73px
+    );
+  }
+  .navigations {
+    @extend .copyright;
+    display: flex;
+    gap: 2rem;
+    & > a {
+      text-decoration: none;
+      color: colors.$white;
+    }
+  }
+
+  @include mediaQueries.devices(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .form-container {
+      display: flex;
+      border: 1px solid colors.$white;
+      border-radius: 3rem;
+      color: colors.$white;
+      background-color: transparent;
+      //   grid-template-columns: repeat(2, minmax(0, 1fr));
+      & > input {
+        border: none;
+      }
+      & > button {
+        width: 40%;
+        padding: 1rem;
+        border: none;
+        place-self: center;
+        border-left: 1px solid colors.$white;
+
+        // place-items: end;
+      }
+    }
+  }
+}

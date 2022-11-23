@@ -1,0 +1,54 @@
+@use '../base/typography';
+@use '../base/colors';
+@use '../base/mediaQueries';
+
+.hero {
+  background: url('../../assets/images/hero-mobile-bg.svg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  color: colors.$white;
+  padding: 1rem;
+  .logo {
+    display: grid;
+    place-content: center;
+    img {
+      margin-bottom: 10rem;
+    }
+  }
+  .hero-details {
+    .title {
+      @include typography.fontTheme(
+        $fontSize: 62px,
+        $fontWeight: 700,
+        $lineHeight: 69px
+      );
+    }
+    .description {
+      @include typography.fontTheme(
+        $fontFamily: 'Aeonik Regular',
+        $fontSize: 14px,
+        $fontWeight: 400,
+        $lineHeight: 22px
+      );
+    }
+  }
+
+  @include mediaQueries.devices(tablet) {
+    background: url('../../assets/images/hero-bg.svg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .logo {
+      display: inline;
+      padding: 2rem;
+    }
+    .hero-details {
+      width: 50%;
+    }
+  }
+}

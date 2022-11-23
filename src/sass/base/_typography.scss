@@ -1,0 +1,13 @@
+@mixin fontTheme(
+  $fontWeight: 400,
+  $fontSize: 48px,
+  $fontStyle: normal,
+  $lineHeight: 20px,
+  $fontFamily: 'Kallisto Bold'
+) {
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $fontFamily;
+}

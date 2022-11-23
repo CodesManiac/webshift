@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Kallisto Bold';
+  src: local('Kallisto Bold') url(./assets/fonts/KallistoBold.otf)
+    format('opentype');
+}
+@font-face {
+  font-family: 'Kallisto Medium';
+  src: local('Kallisto Medium') url(./assets/fonts/KallistoMedium.otf)
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Aeonik Bold';
+  src: local('AeonikTRIAL-Bold') url(./assets/fonts/AeonikTRIAL-Bold.otf)
+    format('opentype');
+}
+@font-face {
+  font-family: 'Aeonik Regular';
+  src: local('AeonikTRIAL_Regular') url(./assets/fonts/AeonikTRIAL-Regular.otf)
+    format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  //   sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

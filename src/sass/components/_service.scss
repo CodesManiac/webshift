@@ -1,0 +1,142 @@
+@use '../base/typography';
+@use '../base/colors';
+@use '../base/mediaQueries';
+
+.service_container {
+  background: url('../../assets/images/service-bg.svg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: colors.$white;
+  .service-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid colors.$white;
+
+    .diamond {
+      background: url('../../assets/images/service-mobile-diamond.svg')
+        no-repeat center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .empty-divs {
+      display: none;
+    }
+    .v {
+      background: url('../../assets/images/service-mobile-v.svg') no-repeat
+        center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 188px;
+    }
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+
+    .service-left {
+      padding: 2rem;
+      display: grid;
+      place-content: center;
+      .image {
+        width: 100%;
+      }
+    }
+
+    .service-right {
+      padding: 2rem;
+
+      .title {
+        @include typography.fontTheme(
+          $fontSize: 40px,
+          $fontWeight: 300,
+          $lineHeight: 47px
+        );
+      }
+      .description {
+        @include typography.fontTheme(
+          $fontFamily: 'Aeonik Regular',
+          $fontSize: 14px,
+          $fontWeight: 400,
+          $lineHeight: 22px
+        );
+      }
+      .join-button {
+        @include typography.fontTheme(
+          $fontSize: 18px,
+          $fontWeight: 400,
+          $lineHeight: 22px
+        );
+        background-color: transparent;
+        padding: 1rem;
+        margin-top: 2rem;
+        color: colors.$yellow;
+        border: 1px solid colors.$yellow;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        &:hover {
+          background-color: colors.$yellow;
+          color: colors.$white;
+        }
+      }
+    }
+  }
+  .ball-container {
+    position: relative;
+    .ball {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+    }
+  }
+  @include mediaQueries.devices(tablet) {
+    .service-row {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      .diamond {
+        background: url('../../assets/images/service-diamond.svg') no-repeat
+          center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .empty-divs {
+        display: grid;
+        border-right: 1px solid colors.$white;
+        border-left: 1px solid colors.$white;
+      }
+      .v {
+        background: url('../../assets/images/service-v.svg') no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 242px;
+      }
+    }
+    .service {
+      flex-direction: row;
+      .service-left {
+        width: 50%;
+        border-right: 1px solid colors.$white;
+      }
+      .service-right {
+        width: 50%;
+        padding: 2rem;
+
+        .title {
+          @include typography.fontTheme(
+            $fontSize: 54px,
+            $fontWeight: 400,
+            $lineHeight: 59px
+          );
+        }
+      }
+    }
+  }
+}

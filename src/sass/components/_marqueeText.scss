@@ -1,0 +1,17 @@
+@use '../base/typography';
+
+.marquee-container {
+  @include typography.fontTheme(
+    $fontSize: 26px,
+    $fontWeight: 700,
+    $lineHeight: 58px
+  );
+  background: url('../../assets/images/marquee-bg.svg') no-repeat left top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .marquee-text {
+    margin-right: 3rem;
+  }
+}

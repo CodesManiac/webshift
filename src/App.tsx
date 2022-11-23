@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hero from './components/Hero';
+import './assets/fonts/KallistoBold.otf';
+import './assets/fonts/KallistoMedium.otf';
+import './assets/fonts/AeonikTRIAL-Bold.otf';
+import './assets/fonts/AeonikTRIAL-Regular.otf';
+import './sass/style.scss';
+import Service from './components/Service';
+import About from './components/About';
+import MarqueeText from './components/MarqueeText';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Hero />
+      <MarqueeText />
+      <Service />
+      <About />
+      <Footer />
+    </>
   );
 }
 

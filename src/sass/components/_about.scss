@@ -1,0 +1,209 @@
+@use '../base/typography';
+@use '../base/colors';
+@use '../base/mediaQueries';
+
+.about-container {
+  background: url('../../assets/images/about-mobile-bg.svg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: colors.$white;
+  .about-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .square {
+      background: url('../../assets/images/about-mobile-square.svg') no-repeat
+        center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .empty-divs {
+      display: none;
+    }
+    .arrow {
+      display: none;
+    }
+    .diamond {
+      background: url('../../assets/images/about-mobile-diamond.svg') no-repeat
+        center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 187px;
+    }
+  }
+  .about {
+    display: flex;
+    flex-direction: column-reverse;
+    // height: 70vh;
+    border-bottom: 1px solid colors.$white;
+
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border-bottom: 1px solid colors.$yellow;
+
+      .title {
+        @include typography.fontTheme(
+          $fontSize: 40px,
+          $fontWeight: 300,
+          $lineHeight: 47px
+        );
+        // height: 80%;
+        padding: 1rem;
+      }
+      .left-details {
+        @include typography.fontTheme(
+          $fontSize: 14px,
+          $fontFamily: 'Aeonik Regular',
+          $fontWeight: 300,
+          $lineHeight: 26px
+        );
+        padding: 1rem;
+      }
+      .left-bottom {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        // margin-top: auto;
+        width: 100%;
+        .empty-div {
+          display: none;
+        }
+        .about-button {
+          background-color: colors.$yellow;
+          display: grid;
+          place-content: center;
+          padding: 2rem;
+          // margin-bottom: auto;
+          button {
+            @include typography.fontTheme(
+              $fontSize: 18px,
+              $fontWeight: 400,
+              $lineHeight: 21px
+            );
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 1.5rem;
+            border: 1px solid colors.$black;
+            background: transparent;
+          }
+        }
+      }
+    }
+    .about-right {
+      display: grid;
+      place-content: center;
+      place-items: center;
+      padding: 1rem 0;
+      .image {
+        width: 50%;
+      }
+      .right-details {
+        background: url('../../assets/images/ellipse.svg') no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        margin-top: 4rem;
+        width: 498px;
+        height: 102px;
+        display: none;
+      }
+    }
+  }
+
+  .innovation-image {
+    width: 100%;
+    object-fit: fill;
+  }
+  @include mediaQueries.devices(tablet) {
+    background: url('../../assets/images/about-bg.svg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: colors.$white;
+
+    .about-row {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      border: 1px solid colors.$white;
+
+      .square {
+        background: url('../../assets/images/about-square.svg') no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .empty-divs {
+        display: grid;
+        border-right: 1px solid colors.$white;
+        border-left: 1px solid colors.$white;
+      }
+      .span {
+        grid-column: span 2 / span 2;
+      }
+      .arrow {
+        display: grid;
+        background: url('../../assets/images/about-arrow.png') no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .diamond {
+        background: url('../../assets/images/about-diamond.svg') no-repeat
+          center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 241px;
+      }
+    }
+    .about {
+      flex-direction: row;
+      .about-left {
+        place-items: start;
+        width: 50%;
+        border-right: 1px solid colors.$white;
+        .title {
+          @include typography.fontTheme(
+            $fontSize: 54px,
+            $fontWeight: 300,
+            $lineHeight: 59px
+          );
+          padding: 3rem;
+        }
+        .left-details {
+          display: none;
+        }
+        .left-bottom {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          .about-button {
+            grid-column: span 3 / span 3;
+          }
+          .empty-div {
+            display: grid;
+            border: 1px solid colors.$white;
+          }
+        }
+      }
+      .about-right {
+        width: 50%;
+
+        .right-details {
+          display: block;
+        }
+      }
+    }
+  }
+}
