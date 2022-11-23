@@ -34,8 +34,7 @@ const Footer = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='form-container'>
           <input
-            type='text'
-            autoComplete='name'
+            type='email'
             {...register('email', {
               required: 'Required',
               pattern: {
