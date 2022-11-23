@@ -40,7 +40,6 @@
   .about {
     display: flex;
     flex-direction: column-reverse;
-    // height: 70vh;
     border-bottom: 1px solid colors.$white;
 
     .about-left {
@@ -56,7 +55,6 @@
           $fontWeight: 300,
           $lineHeight: 47px
         );
-        // height: 80%;
         padding: 1rem;
       }
       .left-details {
@@ -71,7 +69,6 @@
       .left-bottom {
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        // margin-top: auto;
         width: 100%;
         .empty-div {
           display: none;
@@ -81,7 +78,7 @@
           display: grid;
           place-content: center;
           padding: 2rem;
-          // margin-bottom: auto;
+
           button {
             @include typography.fontTheme(
               $fontSize: 18px,
@@ -93,6 +90,11 @@
             border-radius: 1.5rem;
             border: 1px solid colors.$black;
             background: transparent;
+            &:hover {
+              background-color: colors.$black;
+              border: 1px solid colors.$white;
+              color: colors.$white;
+            }
           }
         }
       }

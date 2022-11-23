@@ -14,23 +14,25 @@
   .logo {
     display: grid;
     place-content: center;
+    padding: 2rem;
+
     img {
-      margin-bottom: 10rem;
+      margin-bottom: 2rem;
     }
   }
   .hero-details {
     .title {
       @include typography.fontTheme(
-        $fontSize: 62px,
+        $fontSize: 47px,
         $fontWeight: 700,
-        $lineHeight: 69px
+        $lineHeight: 53px
       );
     }
     .description {
       @include typography.fontTheme(
         $fontFamily: 'Aeonik Regular',
         $fontSize: 14px,
-        $fontWeight: 400,
+        $fontWeight: 250,
         $lineHeight: 22px
       );
     }
@@ -45,10 +47,21 @@
 
     .logo {
       display: inline;
-      padding: 2rem;
     }
     .hero-details {
-      width: 50%;
+      width: 50vw;
+      padding: 0 4rem;
+      .title {
+        @include typography.fontTheme(
+          $fontSize: 62px,
+          $fontWeight: 700,
+          $lineHeight: 69px
+        );
+      }
+
+      .description {
+        width: 50%;
+      }
     }
   }
 }
