@@ -48,7 +48,7 @@
   }
   .copyright {
     @include typography.fontTheme(
-      $fontFamily: 'Aeonik Regular',
+      $fontFamily: 'Aeonik',
       $fontSize: 12px,
       $fontWeight: 400
     );

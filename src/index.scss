@@ -1,21 +1,11 @@
 @font-face {
-  font-family: 'Kallisto Bold';
+  font-family: 'Kallisto';
   src: local('Kallisto Bold') url(./assets/fonts/KallistoBold.otf)
-    format('opentype');
-}
-@font-face {
-  font-family: 'Kallisto Medium';
-  src: local('Kallisto Medium') url(./assets/fonts/KallistoMedium.otf)
     format('opentype');
 }
 
 @font-face {
-  font-family: 'Aeonik Bold';
-  src: local('AeonikTRIAL-Bold') url(./assets/fonts/AeonikTRIAL-Bold.otf)
-    format('opentype');
-}
-@font-face {
-  font-family: 'Aeonik Regular';
+  font-family: 'Aeonik';
   src: local('AeonikTRIAL_Regular') url(./assets/fonts/AeonikTRIAL-Regular.otf)
     format('opentype');
 }
