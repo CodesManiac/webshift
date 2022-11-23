@@ -60,7 +60,7 @@
       .left-details {
         @include typography.fontTheme(
           $fontSize: 14px,
-          $fontFamily: 'Aeonik Regular',
+          $fontFamily: 'Aeonik',
           $fontWeight: 300,
           $lineHeight: 26px
         );

@@ -30,7 +30,7 @@
     }
     .description {
       @include typography.fontTheme(
-        $fontFamily: 'Aeonik Regular',
+        $fontFamily: 'Aeonik',
         $fontSize: 14px,
         $fontWeight: 250,
         $lineHeight: 22px

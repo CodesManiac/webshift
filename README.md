@@ -1,6 +1,8 @@
 <img src='./src/assets/icons/logo.svg' />
 
-<center> <h2> A React landing page for Webshift App </h2></center>
+<h2>The landing page of an application that empowers designers and developers to build immersive AR/VR websites in a completely visual canvas - no coding needed.</h2>
+
+<h2>Deployed at (https://webbshift.netlify.app/)</h2>
 
 ## Built with
 
